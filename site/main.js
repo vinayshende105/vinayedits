@@ -120,18 +120,18 @@
 
   /* ---------- Rate list ---------- */
   $("#chalk").innerHTML = `<h3>RATE LIST</h3>` + S.services.map(s =>
-    `<p><span>${esc(s.name)}</span><i></i><b>${s.price ? esc(s.price) + (s.short ? esc(s.short) : "") : "Ask"}</b></p>`).join("");
+    `<p><span>${esc(s.name)}${s.extra ? ` <em>${esc(s.extra)}</em>` : ""}</span><i></i><b>${s.price ? esc(s.price) + (s.short ? esc(s.short) : "") : "Ask"}</b></p>`).join("");
   $("#rateDetails").innerHTML = S.services.map((s, i) => `
     <article class="price-tag reveal" style="--tilt:${[-2, 1.5, -1][i % 3]}deg">
       <div class="pt-card">
         <img class="pt-bg" src="assets/ui/price-tag.webp" alt="" aria-hidden="true" loading="lazy">
         <div class="pt-inner">
-          <h3>${esc(s.name)}</h3>
+          <h3>${esc(s.name)}${s.extra ? `<span class="pt-extra">${esc(s.extra)}</span>` : ""}</h3>
           <p class="pt-price">${s.price ? `<small>from</small> ${esc(s.price)} <small>${esc(s.unit)}</small>` : "Ask for a quote"}</p>
           <p class="pt-items">${s.items.map(esc).join(" · ")}</p>
         </div>
       </div>
-      <a class="plate plate-red" href="${wa(`Hi Vinay! I'm interested in ${s.name} editing.`)}"${c.whatsapp ? ' target="_blank" rel="noopener"' : ""}>Order now</a>
+      <a class="plate plate-red" href="${wa(`Hi Vinay! I'm interested in ${s.name}${s.extra ? " " + s.extra : ""} editing.`)}"${c.whatsapp ? ' target="_blank" rel="noopener"' : ""}>Order now</a>
     </article>`).join("");
 
   /* ---------- Receipt ---------- */

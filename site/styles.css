@@ -1,3 +1,9 @@
+@font-face {
+  font-family: "Green Matcha";
+  src: url("assets/fonts/green-matcha.otf") format("opentype");
+  font-weight: 100 900; /* single weight: never fake-bold it */
+  font-display: swap;
+}
 :root {
   --sky-top: #6FAFE3;
   --sky-bot: #CDE7F8;
@@ -18,6 +24,7 @@
   --shadow: 5px 5px 0 var(--ink);
   --shadow-sm: 3px 3px 0 var(--ink);
   --display: "Baloo 2", system-ui, sans-serif;
+  --head: "Green Matcha", "Baloo 2", system-ui, sans-serif; /* headings, buttons, boards, tags */
   --hand: "Kalam", "Baloo 2", cursive;
   --mono: "Space Mono", ui-monospace, monospace;
   --gutter: clamp(16px, 4vw, 48px);
@@ -33,7 +40,7 @@ body {
 }
 img { max-width: 100%; display: block; }
 a { color: inherit; }
-h1, h2, h3 { margin: 0; line-height: 1; font-weight: 800; letter-spacing: -0.01em; }
+h1, h2, h3 { margin: 0; line-height: 1; font-weight: 800; letter-spacing: 0; font-family: var(--head); }
 h2 { font-size: clamp(2rem, 5vw, 3.6rem); }
 p { margin: 0; }
 .kicker { font-family: var(--mono); font-size: .78rem; text-transform: uppercase; letter-spacing: .14em; color: var(--ink-soft); margin-bottom: 12px; }
@@ -42,7 +49,7 @@ p { margin: 0; }
 .btn {
   display: inline-flex; align-items: center; justify-content: center; gap: 8px;
   padding: 10px 22px 8px; border: var(--line); border-radius: 999px;
-  font: 800 1.05rem/1.2 var(--display); text-decoration: none; cursor: pointer;
+  font: 800 1.05rem/1.2 var(--head); text-decoration: none; cursor: pointer;
   box-shadow: var(--shadow-sm); transition: transform .15s, box-shadow .15s;
 }
 .btn:hover { transform: translate(-2px, -2px); box-shadow: 5px 5px 0 var(--ink); }
@@ -99,7 +106,7 @@ p { margin: 0; }
 .board-text {
   position: absolute; left: 27%; right: 26%; top: 3%; height: 19%;
   display: flex; align-items: center; justify-content: center; gap: .3em;
-  font-weight: 800; font-size: 6.6cqw; line-height: 1; padding-top: .12em; text-transform: uppercase; letter-spacing: .02em;
+  font-family: var(--head); font-weight: 800; font-size: 5.1cqw; line-height: 1; padding-top: .12em; text-transform: uppercase; letter-spacing: 0;
   color: var(--red); -webkit-text-stroke: .045em var(--ink); paint-order: stroke fill; text-shadow: .05em .06em 0 var(--ink);
 }
 .board-text span:last-child { color: var(--blue); }
@@ -124,7 +131,7 @@ p { margin: 0; }
 .cat-board > span {
   position: absolute; left: 10.6%; right: 13.3%; top: 56.6%; bottom: 7.4%;
   display: flex; align-items: center; justify-content: center; text-align: center; line-height: .95;
-  font-weight: 800; font-size: 10.5cqw; text-wrap: balance; color: var(--red); -webkit-text-stroke: .04em var(--ink); paint-order: stroke fill;
+  font-family: var(--head); font-weight: 800; font-size: 10.5cqw; text-wrap: balance; color: var(--red); -webkit-text-stroke: .04em var(--ink); paint-order: stroke fill;
 }
 .cat-board > span > span { display: block; }
 .cat-board small { display: block; font-size: .42em; color: var(--ink); -webkit-text-stroke: 0; font-family: var(--mono); font-weight: 700; letter-spacing: .08em; margin-bottom: .15em; }
@@ -197,6 +204,8 @@ p { margin: 0; }
 .chalk p { display: flex; align-items: baseline; gap: 1.5cqw; font-size: 4.6cqw; line-height: 1.5; }
 .chalk p i { flex: 1; border-bottom: .4cqw dotted rgba(244,241,232,.55); transform: translateY(-.3em); }
 .chalk p b { color: #FFC9BE; font-weight: 700; }
+.chalk p em { font-style: normal; color: var(--yellow); white-space: nowrap; }
+.chalk p span { white-space: nowrap; }
 .rates-copy p:not(.kicker) { color: var(--ink-soft); font-size: 1.1rem; margin-top: 16px; }
 .rate-details { list-style: none; padding: 0; margin: 24px 0 0; display: grid; gap: 12px; }
 .rate-details li { background: var(--paper); border: var(--line); border-radius: 14px; padding: 12px 16px; box-shadow: var(--shadow-sm); display: flex; justify-content: space-between; gap: 12px; align-items: center; }
@@ -292,7 +301,7 @@ dialog::backdrop { background: rgba(36,26,20,.75); backdrop-filter: blur(4px); }
   display: inline-flex; align-items: center; justify-content: center; gap: 8px;
   min-height: var(--ph); padding: 0 calc(var(--ph) * .62); box-sizing: border-box;
   border: 1px solid transparent; border-image-slice: 30% 18% fill; border-image-width: calc(var(--ph) * .3) calc(var(--ph) * .4); border-image-repeat: stretch;
-  font: 800 1.05rem/1 var(--display); color: #fff; text-decoration: none; white-space: nowrap; cursor: pointer; background: none;
+  font: 800 1.05rem/1 var(--head); color: #fff; text-decoration: none; white-space: nowrap; cursor: pointer; background: none;
   text-shadow: 0 2px 0 rgba(36,26,20,.45); padding-top: 3px;
   filter: drop-shadow(0 4px 0 rgba(36,26,20,.3)); transition: transform .15s ease;
 }
@@ -331,7 +340,8 @@ dialog::backdrop { background: rgba(36,26,20,.75); backdrop-filter: blur(4px); }
 .pt-bg { position: absolute; inset: 0; width: 100%; height: 100%; }
 .pt-inner { position: absolute; left: 12%; right: 12%; top: 44%; bottom: 14.5%; gap: 1cqw; display: flex; flex-direction: column; justify-content: center; text-align: center; color: var(--ink); }
 .pt-inner h3 { font-size: 7.2cqw; line-height: 1; }
-.pt-price { font-weight: 800; font-size: 7.6cqw; line-height: 1.1; color: var(--red); }
+.pt-extra { display: block; margin-top: .9cqw; font-size: .62em; color: var(--red); }
+.pt-price { font-family: var(--head); font-weight: 800; font-size: 7.6cqw; line-height: 1.1; color: var(--red); }
 .pt-price small { font-size: .45em; color: var(--ink-soft); font-weight: 700; }
 .pt-items { font-size: 3.3cqw; line-height: 1.3; color: var(--ink-soft); }
 
@@ -355,7 +365,7 @@ dialog::backdrop { background: rgba(36,26,20,.75); backdrop-filter: blur(4px); }
 .ring-photo { position: absolute; inset: 13%; width: 74%; height: 74%; border-radius: 50%; object-fit: cover; background: var(--yellow); }
 .ring-initials { display: grid; place-items: center; font-weight: 800; font-size: 10cqw; }
 .ring-frame { position: absolute; inset: 0; width: 100%; height: 100%; }
-.client strong { display: block; max-width: 100%; font-size: 7.4cqw; line-height: 1.05; margin-top: .6cqw; }
+.client strong { font-family: var(--head); display: block; max-width: 100%; font-size: 7.4cqw; line-height: 1.05; margin-top: .6cqw; }
 .client small { display: block; max-width: 100%; font-family: var(--mono); font-size: 3.5cqw; line-height: 1.35; color: var(--ink-soft); }
 .client small b { display: block; font-weight: 700; text-transform: uppercase; letter-spacing: .05em; }
 .client-work { display: block; max-width: 100%; font-size: 4.7cqw; line-height: 1.3; }

@@ -66,10 +66,11 @@ window.SITE = {
       items: ["YouTube edits", "Story pacing & retention cuts", "Motion graphics & captions", "Colour + sound polish"]
     },
     {
-      name: "Podcasts",
+      name: "Podcast",
+      extra: "+ 10 Shorts", // shown next to the name on the chalkboard and price tag
       price: "$300",
       unit: "per episode",
-      items: ["Full episode edit", "+ 5 short clips included", "Multi-cam switching", "Audio cleanup"]
+      items: ["Full episode edit", "10 short clips from it", "Multi-cam switching", "Audio cleanup"]
     }
   ],
 
