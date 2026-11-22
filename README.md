@@ -25,7 +25,7 @@ About (framed photo + receipt) → Rate list (chalkboard + price tags) →
 Clients (visiting cards on cork board) → Contact (counter) → Footer (night street).
 
 ## Still to do
-- Email address (after the domain is set up) → `site/content.js` → `contact.email`
+- ~~Email address~~ — done: hello@vinayedits.com (Google Workspace)
 - Real client testimonials (only real words from clients) → `site/content.js` → `reviews`
 - Talking-head videos (aisle is hidden until there are some)
 - Connect the vinayedits.com domain and publish

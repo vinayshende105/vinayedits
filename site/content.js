@@ -10,7 +10,7 @@ window.SITE = {
 
   contact: {
     whatsapp: "919921536187", // country code + number, digits only
-    email: "",                // TODO: after the vinayedits.com domain is set up
+    email: "hello@vinayedits.com",
     instagram: "vnay_vfx"     // without @
   },
 
