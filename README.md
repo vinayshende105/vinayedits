@@ -28,4 +28,4 @@ Clients (visiting cards on cork board) → Contact (counter) → Footer (night s
 - ~~Email address~~ — done: hello@vinayedits.com (Google Workspace)
 - Real client testimonials (only real words from clients) → `site/content.js` → `reviews`
 - Talking-head videos (aisle is hidden until there are some)
-- Connect the vinayedits.com domain and publish
+- ~~Connect the vinayedits.com domain and publish~~ — live at https://vinayedits.com
