@@ -1,0 +1,153 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Vinay's Store — Freelance Video Editor</title>
+  <meta name="description" content="Freelance video editor for long-form YouTube, shorts & reels, talking-head videos and podcasts. Step inside Vinay's Store." />
+  <meta property="og:title" content="Vinay's Store — Freelance Video Editor" />
+  <meta property="og:description" content="Long-form, Shorts & Reels, Talking Head & Podcast editing." />
+  <meta property="og:image" content="assets/og.jpg" />
+  <meta name="theme-color" content="#8EC3EC" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@500;600;700;800&family=Kalam:wght@400;700&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet" />
+  <link rel="preload" as="image" href="assets/store.webp?v=21" />
+  <link rel="stylesheet" href="styles.css?v=21" />
+</head>
+<body>
+  <header class="nav">
+    <a href="#top" class="logo"><img src="assets/ui/logo.webp" alt="vinayedits" width="800" height="320" /></a>
+    <a class="plate plate-red nav-cta" href="#contact" data-wa="Hi Vinay! I'd like to hire you for an edit.">Hire me</a>
+  </header>
+
+  <main id="top">
+    <!-- ============ THE SHOP (pinned scroll scene) ============ -->
+    <section class="stage" id="stage" aria-label="Vinay's Store">
+      <!-- Sky -->
+      <div class="sky" id="sky" aria-hidden="true">
+        <img class="cloud c1" src="assets/cloud.webp" alt="" />
+        <img class="cloud c2" src="assets/cloud.webp" alt="" />
+        <img class="cloud c3" src="assets/cloud.webp" alt="" />
+        <img class="cloud c4" src="assets/cloud.webp" alt="" />
+      </div>
+
+      <!-- Intro text in the sky -->
+      <div class="intro" id="intro">
+        <p class="intro-kicker">Namaste! 🙏</p>
+        <h1>Fresh edits,<br />made daily.</h1>
+        <p class="intro-sub">Freelance video editor for long-form, shorts, talking heads &amp; podcasts.</p>
+        <p class="scroll-hint"><span class="plate plate-cream">Scroll to open the shop</span><img class="hint-arrow" src="assets/ui/arrow.webp" alt="" aria-hidden="true" /></p>
+      </div>
+
+      <!-- Inside of the shop (seen through the door) -->
+      <div class="inside" id="inside">
+        <img class="inside-bg" src="assets/inside-2400.webp" srcset="assets/inside-1200.webp 1200w, assets/inside-2400.webp 2400w" sizes="100vw" alt="" />
+        <img class="inside-toran" src="assets/toran.webp" alt="" aria-hidden="true" />
+        <div class="panels" id="panels"></div>
+      </div>
+
+      <!-- Street + store front -->
+      <div class="street" id="street" aria-hidden="true">
+        <img class="pole" id="pole" src="assets/pole.webp" alt="" />
+        <div class="ground"></div>
+        <div class="store" id="store">
+          <div class="door" id="door"><img class="shutter" id="shutter" src="assets/shutter.webp" alt="" /></div>
+          <img class="store-img" src="assets/store.webp?v=21" alt="" />
+          <div class="board-text"><span>Vinay's</span> <span>Store</span></div>
+          <img class="open-sign swing" src="assets/open-sign.webp" alt="" />
+          <img class="nimbu swing" src="assets/nimbu.webp" alt="" />
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ ABOUT ============ -->
+    <section class="about" id="about">
+      <div class="toran-strip" aria-hidden="true"></div>
+      <div class="about-grid">
+        <figure class="frame reveal">
+          <div class="frame-photo"><img src="assets/character.webp" alt="3D cartoon of Vinay at his shop counter" loading="lazy" /></div>
+          <img class="frame-img" src="assets/frame.webp" alt="" aria-hidden="true" loading="lazy" />
+        </figure>
+        <div class="about-copy reveal">
+          <p class="kicker">Dukaan ka maalik · The shopkeeper</p>
+          <h2>I wasn't born privileged. I made myself privileged.</h2>
+          <p>I grew up without much. Then Papa gifted me a laptop, and I taught myself Premiere Pro, Photoshop and After Effects on it, one tutorial at a time.</p>
+          <p>From my first agency gig in November 2024 to freelance clients today, editing has paid for my college, my MacBook Pro and the setup I work from. Here's the receipt.</p>
+        </div>
+        <div class="receipt reveal" id="receiptBox" aria-label="Career timeline as a receipt"></div>
+      </div>
+    </section>
+
+    <!-- ============ RATE LIST ============ -->
+    <section class="rates" id="rates">
+      <div class="rates-grid">
+        <div class="rate-board reveal">
+          <img src="assets/rate-board.webp" alt="" aria-hidden="true" loading="lazy" />
+          <div class="chalk" id="chalk"></div>
+        </div>
+        <div class="rates-copy reveal">
+          <p class="kicker">Rate list</p>
+          <h2>Kya chahiye? Pick from the menu.</h2>
+          <p>All prices in USD. Need something custom or a monthly bundle? Just ask at the counter.</p>
+        </div>
+      </div>
+      <div class="price-tags" id="rateDetails"></div>
+    </section>
+
+    <!-- ============ REVIEWS ============ -->
+    <section class="reviews-sec" id="reviews">
+      <div class="wrap">
+        <div class="reveal">
+          <p class="kicker">Regular customers</p>
+          <h2>Creators who shop here</h2>
+        </div>
+        <div class="cork reveal"><div class="clients" id="clientList"></div></div>
+        <div class="reviews" id="reviewList"></div>
+      </div>
+    </section>
+
+    <!-- ============ CONTACT ============ -->
+    <section class="contact" id="contact">
+      <img class="nimbu-hang l swing" src="assets/nimbu.webp" alt="" aria-hidden="true" loading="lazy" />
+      <img class="nimbu-hang r swing" src="assets/nimbu.webp" alt="" aria-hidden="true" loading="lazy" />
+      <div class="contact-inner reveal">
+        <img class="contact-sign swing" src="assets/open-sign.webp" alt="Open" loading="lazy" />
+        <h2>Dukaan khuli hai.<br />Let's make your next video.</h2>
+        <p>Tell me what you're making and I'll get back to you.</p>
+        <div class="contact-btns" id="contactBtns"></div>
+        <img class="counter-img" src="assets/ui/counter.webp" alt="" aria-hidden="true" loading="lazy" />
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <a href="#top" class="logo"><img src="assets/ui/logo.webp" alt="vinayedits" width="800" height="320" loading="lazy" /></a>
+    <div class="street-art">
+      <img src="assets/ui/footer-street.webp" alt="Vinay's Store at night with its shutter closed" width="2200" height="1228" loading="lazy" />
+      <p class="shutter-text">Freelance video editor<br />Thanks for shopping,<br />come again!</p>
+    </div>
+    <p class="fine">© <span id="year"></span> vinayedits.com</p>
+  </footer>
+
+  <!-- Video player -->
+  <dialog class="player" id="player" aria-label="Video player">
+    <button class="player-close" aria-label="Close"><img src="assets/ui/close.webp" alt="" /></button>
+    <div class="player-frame" id="playerFrame"></div>
+  </dialog>
+
+  <!-- All videos of one aisle -->
+  <dialog class="shelf" id="shelf" aria-label="All videos">
+    <button class="player-close" aria-label="Close"><img src="assets/ui/close.webp" alt="" /></button>
+    <h3 id="shelfTitle"></h3>
+    <div class="shelf-grid" id="shelfGrid"></div>
+  </dialog>
+
+  <div class="grain" aria-hidden="true"></div>
+
+  <script src="content.js?v=21"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+  <script src="main.js?v=21"></script>
+</body>
+</html>

@@ -1,0 +1,5 @@
+# Large original artwork and backups stay on this Mac only
+design-assets/
+backups/
+.claude/
+.DS_Store
